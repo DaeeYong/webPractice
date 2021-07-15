@@ -1,16 +1,13 @@
-const clock = document.querySelector("#clock");
+const clock = document.getElementById("clock");
 
-//2초마다 실행
-function sayHello(){
-    console.log("hello");
-}
-function getClock(){
+function timer(){
     const date = new Date();
-    const dateHour = String(date.getHours()).padStart(2, "0");
-    const dateMin = String(date.getMinutes()).padStart(2, "0");
-    const dateSecond = String(date.getSeconds()).padStart(2, "0");
-    clock.innerText = `${dateHour}:${dateMin}:${dateSecond}`;
+    
+    const Hours = String(date.getHours()).padStart(2,"0");
+    const Mins = String(date.getMinutes()).padStart(2,"0");
+    const seconds = String(date.getSeconds()).padStart(2,"0");
+    
+    clock.innerText = `${Hours}:${Mins}:${seconds}`;
 }
-getClock();
-setInterval(getClock, 100); //func, ms (realtime every per 100ms)
-//setTimeout(sayHello, 5000);
+timer();
+setInterval(timer,1000);
