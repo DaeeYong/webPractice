@@ -32,5 +32,3 @@ else{
     painatGreetings(storedUserName);
 }
 
-//-> 7.2
-
